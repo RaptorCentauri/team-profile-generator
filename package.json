@@ -1,0 +1,36 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest",
+    "coverage": "npm test --coverage && codecov"
+  },
+  "jest": {
+    "transform": {},
+    "verbose": true,
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleNameMapper": {
+      "\\.(css|scss|less)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "js"
+    ]
+  },
+  "keywords": [],
+  "author": "RaptorCentauri",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "jest": "^27.0.6"
+  },
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.1.1"
+  }
+}
