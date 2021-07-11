@@ -9,35 +9,35 @@ const teamGeneratorPrompts = {
 		{
 			name:`id`,
 			type:`input`,
-			message: `What is the employee's id number?`
+			message: (answers) => `What is ${answers.name}'s id number?`
 		},
 		{
 			name:`email`,
 			type:`input`,
-			message: `What is the employee's email?`
+			message: (answers) => `What is ${answers.name}'s email?`
 		},
 		{
 			name:`role`,
 			type:`list`,
-			message: `What is the employee's role?`,
+			message: (answers) => `What is ${answers.name}'s role?`,
 			choices: [`Manager`, `Engineer`, `Intern`]
 		},
 		{
 			type: `input`,
 			name: `officeNumber`,
-			message: `What is the employee's office number?`,
+			message: (answers) => `What is ${answers.name}'s office number?`,
 			when: (answers) => answers.role === `Manager`
 		},
 		{
 			type: `input`,
 			name: `github`,
-			message: `What is the employee's github profile?`,
+			message: (answers) => `What is ${answers.name}'s github profile?`,
 			when: (answers) => answers.role === `Engineer`
 		},
 		{
 			type: `input`,
 			name: `school`,
-			message: `What is the employee's school?`,
+			message: (answers) => `What is ${answers.name}'s school?`,
 			when: (answers) => answers.role === `Intern`
 		}
 	],
