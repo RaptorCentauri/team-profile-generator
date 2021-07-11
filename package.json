@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
-    "test": "jest",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "coverage": "npm test --coverage && codecov"
   },
   "jest": {
@@ -26,6 +26,7 @@
   "author": "RaptorCentauri",
   "license": "ISC",
   "devDependencies": {
+    "codecov": "^3.8.2",
     "eslint": "^7.30.0",
     "jest": "^27.0.6"
   },
