@@ -5,7 +5,7 @@ import * as fs from 'fs-extra'
 async function init(){
 	let team = await generateTeam()
 	let teamHTML = generateTeamHTML(team)		
-	await fs.outputFile(`../pages/index.html`, teamHTML)
+	await fs.outputFile(`./pages/index.html`, teamHTML)
 }
 
 init()
